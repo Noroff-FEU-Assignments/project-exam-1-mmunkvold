@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Category Page - Where you find the posts in a category" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+    <!--  -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png" />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <div class="title-container">
+            <h1>Hug a Tree</h1>
+            <p class="subtitle-left">and be happy!</p>
+          </div>
+        </a>
+        <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
+        <p class="subtitle-right">and be happy!</p>
+        <form id="search-form" action="#" method="GET">
+          <label for="search"></label>
+          <input type="search" id="search" placeholder="Search this site..." />
+          <button id="search-btn" type="submit">go</button>
+        </form>
+
+        <ul class="main-menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="blogposts.html">All posts</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="horizontal-line-menu"></div>
+      </nav>
+    </header>
+    <main>
+      <div class="category-name"></div>
+
+      <div class="single-category"></div>
+    </main>
+    <footer>
+      <ul id="footer-menu">
+        <li><a href="index.html">home</a></li>
+        <li><a href="blogposts.html">all posts</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+      <div class="site-info">
+        <div><a class="copyright" href="index.html">&copy; Hug a Tree 2021</a></div>
+        <div><button id="totop">Top of page</button></div>
+      </div>
+    </footer>
+    <script src="js/components/displayError.js"></script>
+    <script src="js/components/to-topbutton.js"></script>
+    <script src="js/singlecategory.js"></script>
+  </body>
+</html>
