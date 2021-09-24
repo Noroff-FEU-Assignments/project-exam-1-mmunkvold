@@ -72,7 +72,7 @@ async function getLatestPosts() {
       }
 
       for (let i = firstPost; i < firstPost + 4; i++) {
-        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"><h3>${results[i].title.rendered}</h3></a><div>${results[i].excerpt.rendered}</div></div></div>`;
+        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"><h3>${results[i].title.rendered}</h3></a></div></div>`;
         /* previousBtn.style.display = "block";
         nextBtn.style.display = "block"; */
       }
@@ -100,7 +100,7 @@ async function getLatestPosts() {
         firstPost = results.length - 4;
       }
       for (let i = firstPost; i < firstPost + 4; i++) {
-        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"><h3>${results[i].title.rendered}</h3></a><div>${results[i].excerpt.rendered}</div></div></div>`;
+        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"><h3>${results[i].title.rendered}</h3></a></div></div>`;
         /*  previousBtn.style.display = "block";
         nextBtn.style.display = "block"; */
       }
