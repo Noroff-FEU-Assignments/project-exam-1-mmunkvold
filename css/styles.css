@@ -70,21 +70,21 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--main-green);
+  color: var(--dark-green);
 }
 
 a:hover,
 a:focus,
-.active,
 .copyright:hover,
 .copyright:focus {
-  color: var(--light-green);
+  color: var(--main-green);
   text-decoration: underline;
   font-weight: 700;
 }
 
 .active {
   letter-spacing: 0.1em;
+  color: var(--dark-green);
 }
 
 ul {
@@ -132,7 +132,7 @@ nav {
 
 .subtitle-right,
 .subtitle-left {
-  color: var(--main-green);
+  color: var(--dark-green);
   line-height: 2.7;
 }
 
@@ -172,7 +172,7 @@ main {
 }
 
 .newest p:first-of-type,
-.single-post p:first-of-type {
+.singlepost p:first-of-type {
   font-size: larger;
   font-weight: bold;
 }
@@ -200,6 +200,10 @@ main {
 .newest img {
   max-width: 100%;
   height: auto;
+}
+
+.newest figcaption {
+  display: none;
 }
 
 /* CAROUSEL LATEST POSTS */
@@ -241,7 +245,7 @@ main {
 
 .carousel-actions {
   display: flex;
-  max-width: 20%;
+  width: 200px;
   justify-content: space-between;
   margin: 0.7em auto;
 }
@@ -258,8 +262,15 @@ main {
   padding: 0;
   cursor: pointer;
   margin: 0 0 1em;
-  display: absolute;
   top: 3em;
+}
+
+.next-btn {
+  margin-left: 0.5em;
+}
+
+.prev-btn {
+  margin-right: 0.5em;
 }
 
 .next-btn:hover,
@@ -493,7 +504,7 @@ footer .active {
 
 .copyright:hover,
 .copyright:focus {
-  color: var();
+  color: var(--grey);
 }
 
 /* ================
@@ -545,11 +556,12 @@ footer .active {
     SINGLE POST PAGE 
   =================== */
 
-.single-post {
+.singlepost {
   margin: 0 auto;
+  max-width: 100%;
 }
 
-.single-post img {
+.singlepost img {
   height: auto;
 }
 
@@ -663,11 +675,17 @@ figcaption {
   font-style: italic;
 }
 
+.loading {
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+}
+
 .loading-indicator {
   margin: 0 auto;
   /* position: relative; */
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   border: 2px dashed var(--light-green);
   animation: spin 5s linear infinite;
@@ -830,11 +848,11 @@ figcaption {
     border-right: 0;
   }
 
-  .single-post {
+  .singlepost {
     width: 70ch;
   }
 
-  .single-post img {
+  .singlepost img {
     max-width: 300px;
   }
 
