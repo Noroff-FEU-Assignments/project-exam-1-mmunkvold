@@ -4,30 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Single Post Page - Where you find the whole post" />
+    <meta name="description" content="Single Post - Where you will find the one post" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
     <!--  -->
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/forms.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png" />
-    <title></title>
+    <title>Single Post Page | Hug a Tree</title>
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html">
           <div class="title-container">
-            <h1>Hug a Tree</h1>
+            <p>Hug a Tree</p>
             <p class="subtitle-left">and be happy!</p>
           </div>
         </a>
         <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
         <p class="subtitle-right">and be happy!</p>
-        <form id="search-form" action="#" method="GET">
+        <form class="search-form" action="#" method="GET">
           <label for="search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
@@ -45,12 +45,13 @@
       <div id="overlay">
         <div class="modal" id="modal"></div>
       </div>
-
+      <div class="loading-indicator"></div>
+      <div>Loading...</div>
       <div class="singlepost"></div>
 
       <div class="horizontal-line"></div>
       <div class="comment-container">
-        <div>
+        <!-- <div>
           <h2>Related Posts</h2>
           <div class="related"></div>
         </div>
@@ -61,23 +62,23 @@
             <p>Thank you for posting a comment!</p>
             <p>Your comment will be shown in the comment field shortly.</p>
           </div>
-          <form id="comment-form" action="#" method="POST">
+          <form class="comment-form" action="#" method="POST">
             <div>
-              <p class="small-text">Required fields are marked with <abbr title="required">*</abbr></p>
+              <p class="small-text">Required fields are marked with *.</p>
               <ul>
                 <li>
-                  <label for="comment">Your comment:<abbr title="required" aria-label="required">*</abbr></label>
-                  <textarea name="comment" id="comment" cols="25" rows="8"></textarea>
+                  <label for="comment">Your comment:</label>
+                  <textarea name="comment" id="comment" cols="25" rows="8" required></textarea>
                   <div class="error">Your comment should be at least 10 characters long</div>
                 </li>
                 <li>
-                  <label for="fullname">Name:<abbr title="required" aria-label="required">*</abbr></label>
-                  <input type="text" id="fullname" name="fullname" />
+                  <label for="fullname">Name:</label>
+                  <input type="text" id="fullname" name="fullname" required />
                   <div class="error">Name should be at least 4 characters long</div>
                 </li>
                 <li>
-                  <label for="email">Email:<abbr title="required" aria-label="required">*</abbr></label>
-                  <input type="email" id="email" name="email" />
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required/>
                   <div class="error">Please fill in a valid email address</div>
                 </li>
                 <li>
@@ -93,8 +94,8 @@
             </div>
           </form>
         </div>
-        <!-- <div class="vertical-line"></div> -->
-      </div>
+         <div class="vertical-line"></div> 
+      </div> -->
     </main>
     <footer>
       <ul id="footer-menu">
@@ -111,6 +112,7 @@
 
     <script src="js/components/displayError.js"></script>
     <script src="js/components/to-topbutton.js"></script>
+    <!-- <script src="js/components/comments.js"></script> -->
     <script src="js/singlepost.js"></script>
   </body>
 </html>

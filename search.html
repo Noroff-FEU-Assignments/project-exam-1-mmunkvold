@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Category Page - Where you find the posts in a category" />
+    <meta name="description" content="Single Post - Where you will find the one post" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,9 +32,8 @@
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
         </form>
-
         <ul class="main-menu">
-          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="blogposts.html">All posts</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
@@ -43,11 +42,7 @@
       </nav>
     </header>
     <main>
-      <div class="category-name"></div>
-      <div class="single-category">
-        <div class="loading-indicator"></div>
-        <div>Loading...</div>
-      </div>
+      <div class="search-result">Something</div>
     </main>
     <footer>
       <ul id="footer-menu">
@@ -61,8 +56,10 @@
         <div><button id="totop">Top of page</button></div>
       </div>
     </footer>
+
     <script src="js/components/displayError.js"></script>
     <script src="js/components/to-topbutton.js"></script>
-    <script src="js/singlecategory.js"></script>
+
+    <script src="js/components/search.js"></script>
   </body>
 </html>

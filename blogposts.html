@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
     <!--  -->
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/forms.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png">
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png" />
     <title>Blog Posts | Hug a Tree</title>
   </head>
   <body>
@@ -21,13 +21,13 @@
       <nav>
         <a href="index.html">
           <div class="title-container">
-            <h1>Hug a Tree</h1>
+            <p>Hug a Tree</p>
             <p class="subtitle-left">and be happy!</p>
           </div>
         </a>
         <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
         <p class="subtitle-right">and be happy!</p>
-        <form id="search-form" action="#" method="GET">
+        <form class="search-form" action="#" method="GET">
           <label for="search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
@@ -44,8 +44,11 @@
     </header>
     <main>
       <h1>All the Wonderful Posts on this Blog</h1>
-      <div class="results-container" >
-      <div class="results">Loading...</div>
+      <div class="results-container">
+        <div class="results">
+          <div class="loading-indicator"></div>
+          <div>Loading...</div>
+      </div>
       <div>
         <button class="seemore-btn">See more posts</button>
       </div>
@@ -64,6 +67,6 @@
     </footer>
     <script src="js/blogposts.js"></script>
     <script src="js/components/displayError.js"></script>
-    <script src="js/components/to-topbutton.js"></script>
+    <script src="js/components/to-topButton.js"></script>
   </body>
 </html>

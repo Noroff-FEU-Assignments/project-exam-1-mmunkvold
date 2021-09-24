@@ -21,14 +21,13 @@
       <nav>
         <a href="index.html">
           <div class="title-container">
-            <h1>Hug a Tree</h1>
-            <!-- Not h1 here? -->
+            <p>Hug a Tree</p>
             <p class="subtitle-left">and be happy!</p>
           </div>
         </a>
         <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
         <p class="subtitle-right">and be happy!</p>
-        <form id="search-form" action="#" method="GET">
+        <form class="search-form" action="#" method="GET">
           <label for="search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
@@ -46,36 +45,30 @@
     <main>
     <h1>Contact Me</h1>
     <div class="success"><p>Thank you for contacting me! </p><p>I'll get back to you soon.</p></div>
-    <form id="contact-form" action="#" method="POST">
-      <div><p class="small-text">Required fields are marked with <abbr title="required">*</abbr></p>
-      <!-- See if maybe remove the ul and li -->
+    <form class="contact-form" action="#" method="POST">
+      <div><p class="small-text">Required fields are marked with *</p>
       <ul>
         <li>
-          <label for="fullname">Name:<abbr title="required" aria-label="required">*</abbr></label>
-          <input type="text" id="fullname" name="fullname" />
+          <label for="fullname">Name:*</label>
+          <input type="text" id="fullname" name="fullname" required/>
           <div class="error">Name should be at least 6 characters long</div>
         </li>
         <li>
-          <label for="email">Email:<abbr title="required" aria-label="required">*</abbr></label>
-          <input type="email" id="email" name="email" />
+          <label for="email">Email:*</label>
+          <input type="email" id="email" name="email" required/>
           <div class="error">Please fill in a valid email address</div>
         </li>
         <li></ul></div>
           <div><ul>
-          <label for="subject">Subject: <abbr title="required" aria-label="required"> *</abbr></label>
-          <input type="text" id="subject" name="subject" />
+          <label for="subject">Subject:* </label>
+          <input type="text" id="subject" name="subject" required/>
           <div class="error">Subject should be at least 16 characters long</div>
         </li>
         <li>
-          <label for="message">Your message:<abbr title="required" aria-label="required">*</abbr></label>
-          <textarea name="message" id="message" cols="25" rows="8"></textarea>
+          <label for="message">Your message:*</label>
+          <textarea name="message" id="message" cols="25" rows="8" required></textarea>
           <div class="error">Message should be at least 26 characters long</div>
         </li>
-        <!-- <li>
-          <label for="file">Attach your image: </label> <input type="file" name="file" id="file" accept="image/*;capture=camera" multiple />
-          <div class="error">You can only send images in jpg, jpeg, or png.</div>
-        </li> -->
-
         <li>
           <button type="submit">Send your message</button>
         </li>

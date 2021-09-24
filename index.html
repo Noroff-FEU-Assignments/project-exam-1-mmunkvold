@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
     <!--  -->
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/forms.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <title>Home | Hug a Tree</title>
     <!-- Font awesome for icons -->
     <script src="https://kit.fontawesome.com/ff8ec4a7db.js" crossorigin="anonymous"></script>
@@ -23,17 +23,19 @@
       <nav>
         <a href="index.html">
           <div class="title-container">
-            <h1>Hug a Tree</h1>
+            <p>Hug a Tree</p>
             <p class="subtitle-left">and be happy!</p>
           </div>
         </a>
         <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
         <p class="subtitle-right">and be happy!</p>
-        <form id="search-form" action="#" method="GET">
+
+        <form class="search-form" action="search.html" method="GET">
           <label for="search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
         </form>
+
         <ul class="main-menu">
           <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="blogposts.html">All posts</a></li>
@@ -45,20 +47,29 @@
     </header>
     <div class="wrapper">
       <main>
-        <div class="newest-label">Newest Post</div>
-        <div class="newest">
-          <div>Loading...</div>
+        <div class="newest-container">
+          <div class="newest">
+            <div class="loading-indicator"></div>
+            <div>Loading...</div>
+          </div>
         </div>
 
         <div class="latest-wrapper">
           <h2>Latest Posts</h2>
+
           <div class="latest-carousel">
-            <div>Loading...</div>
-            <div class="carousel-item"></div>
+            <div class="carousel-item">
+              <div class="loading-indicator"></div>
+              <div>Loading...</div>
+            </div>
           </div>
           <div class="carousel-actions">
-            <button class="prev-btn" aria-label="Previous slide"><</button>
-            <button class="next-btn" aria-label="Next slide">></button>
+            <button class="prev-btn" aria-label="Previous 4 posts">&lt</button>
+            <div class="dots dot0"></div>
+            <div class="dots dot1"></div>
+            <div class="dots dot2"></div>
+
+            <button class="next-btn" aria-label="Next 4 posts">&gt</button>
           </div>
         </div>
 
@@ -71,7 +82,9 @@
 
         <div class="featured-container">
           <h2>Featured Posts</h2>
+
           <div class="featured">
+            <div class="loading-indicator"></div>
             <div>Loading...</div>
           </div>
         </div>
@@ -85,27 +98,26 @@
           <p>Why don't you join me?</p>
           <p class="small-text"><a href="about.html">Read more about my tree hugging journey...</a></p>
         </div>
-        <img src="graphic/summertree.png" alt="a colored drawing of a tree with green leaves" />
-        <div class="random-quote">
-          <div>Loading...</div>
-        </div>
-
-         <div>
-          <div class="category-list"><h3>Categories:</h3>
-          <div class="categories"></div>
-        </div>
 
         <div>
-          
-          <div class="comments"><h3>Recent Comments:</h3>
-          <div class="recent-comments"></div>
+          <div class="category-list">
+            <h3>Categories:</h3>
+            <div class="categories"></div>
+          </div>
         </div>
-
+        <img src="graphic/summertree.png" alt="a colored drawing of a tree with green leaves" />
+        <div class="random-quote"></div>
+        <!-- <div>
+          <div class="comments">
+            <h3>Recent Comments:</h3>
+            <div class="recent-comments"></div>
+          </div>
+        </div> -->
       </aside>
     </div>
 
-     <div class="horizontal-line"></div>
-     <h2>Tree Huggers Around the World!</h2>
+    <div class="horizontal-line"></div>
+    <h2>Tree Huggers Around the World!</h2>
     <div class="gallery">
       <div class="gallery-item gallery-item-1">
         <img src="images/gallery/mask.jpg" alt="a woman wearing a mask hugging a tree" />
@@ -133,7 +145,7 @@
       </div>
     </div>
 
-        <footer>
+    <footer>
       <ul id="footer-menu">
         <li><a href="index.html" class="active">home</a></li>
         <li><a href="blogposts.html">all posts</a></li>
@@ -145,10 +157,10 @@
         <div><button id="totop">Top of page</button></div>
       </div>
     </footer>
-
+    <!-- <script src="js/components/search.js"></script> -->
     <script src="js/components/to-topbutton.js"></script>
     <script src="js/components/displayError.js"></script>
-    <script src="js/index.js"></script>
     <script src="js/randomquotes.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
