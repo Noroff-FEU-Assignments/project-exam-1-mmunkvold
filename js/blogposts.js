@@ -20,7 +20,7 @@ async function getAllPosts() {
       console.log("i've been clicked");
       for (let i = 10; i < results.length; i++) {
         console.log("yayy");
-        resultsContainer.innerHTML += `<div class="results"><div class="result-item result-item-noborder"><a href="singlepost.html?id=${results[i].id}"><div><img class="noborder" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"></div><div class="result-item"><h3>${results[i].title.rendered}</h3></a>${results[i].excerpt.rendered}</div></div>`;
+        resultsContainer.innerHTML += `<div class="results"><div class="result-item result-item-noborder"><a href="singlepost.html?id=${results[i].id}"><div><img class="noborder" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"></div><div class="result-item"><div><h3>${results[i].title.rendered}</h3></a>${results[i].excerpt.rendered}</div></div></div>`;
         button.style.display = "none";
       }
     });
