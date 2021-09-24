@@ -1,8 +1,8 @@
 const commentContainer = document.querySelector(".comment-container");
 
-const queryStringComment = document.location.search;
-const paramsComment = new URLSearchParams(queryStringComment);
-const id = paramsComment.get("id");
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
 
 const urlComments = `https://monicamunkvoldnikolaisen.no/treehugging/wp-json/wp/v2/comments?&posts=${id}/`;
 
