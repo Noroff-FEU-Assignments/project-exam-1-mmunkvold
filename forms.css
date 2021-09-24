@@ -1,0 +1,139 @@
+.contact-form,
+.comment-form {
+  background: var(--light-background);
+  border: none;
+  width: 360px;
+  padding: 1em 0;
+  color: var(--dark-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  margin: 0 auto 10em;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 80%;
+  width: 280px;
+  margin: 0.5em 0;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1); /* NB! Bytt denne fargen! */
+}
+
+textarea {
+  overflow: auto;
+}
+
+button {
+  background: var(--main-green);
+  color: var(--white-color);
+  margin: 0 auto;
+  border: 2px solid var(--grey);
+  box-shadow: var(--box-shadow);
+  text-transform: lowercase;
+  letter-spacing: 0.07em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.seemore-btn {
+  margin: 2em 33% 4em;
+}
+
+button:hover,
+button:focus {
+  background: var(--grey);
+}
+
+.search-form {
+  width: 100%;
+  margin: 0;
+  background: var(--white-color);
+  box-shadow: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 6em;
+  text-align: center;
+}
+
+#search {
+  font-family: inherit;
+  width: 250px;
+}
+
+#search-btn {
+  max-width: 50px;
+}
+
+::placeholder {
+  color: var(--dark-color);
+}
+
+/* Styling the error handling on the form and errors elsewhere*/
+.success {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  background: var(--light-green);
+  color: var(--white-color);
+  border: 2px solid var(--main-green);
+  padding: 1em;
+}
+
+.error {
+  display: none;
+  color: var(--red-color);
+  font-size: 0.9rem;
+  width: 50%;
+  margin: 0 0 1em;
+  padding: 0.2em;
+}
+
+/* input:invalid {
+  border-color: var(--red-color);
+  background-color: var(--light-red);
+}
+input:focus:invalid {
+  outline: none;
+} */
+
+/* ================
+    Media Queries 
+  =================== */
+
+@media (min-width: 600px) {
+  .search-form {
+    position: absolute;
+    top: 4.5em;
+    right: 0;
+    width: 50%;
+  }
+
+  .seemore-btn {
+    margin: 2em 45% 1em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact-form {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+  }
+  .search-form {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .search-form {
+    width: 25%;
+  }
+}

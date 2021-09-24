@@ -35,6 +35,7 @@ const previousBtn = document.querySelector(".prev-btn");
 const dot0 = document.querySelector(".dot0");
 const dot1 = document.querySelector(".dot1");
 const dot2 = document.querySelector(".dot2");
+const dot3 = document.querySelector(".dot3");
 
 async function getLatestPosts() {
   try {
@@ -53,14 +54,22 @@ async function getLatestPosts() {
       dot0.style.backgroundColor = "red";
       dot1.style.backgroundColor = "grey";
       dot2.style.backgroundColor = "grey";
+      dot3.style.backgroundColor = "grey";
     } else if (firstPost / 4 == 1) {
       dot0.style.backgroundColor = "grey";
       dot1.style.backgroundColor = "red";
       dot2.style.backgroundColor = "grey";
+      dot3.style.backgroundColor = "grey";
     } else if (firstPost / 4 == 2) {
       dot0.style.backgroundColor = "grey";
       dot1.style.backgroundColor = "grey";
       dot2.style.backgroundColor = "red";
+      dot3.style.backgroundColor = "grey";
+    } else if (firstPost / 4 == 3) {
+      dot0.style.backgroundColor = "grey";
+      dot1.style.backgroundColor = "grey";
+      dot2.style.backgroundColor = "grey";
+      dot3.style.backgroundColor = "red";
     }
     nextBtn.addEventListener("click", function () {
       latestPostContainer.innerHTML = "";
@@ -80,14 +89,22 @@ async function getLatestPosts() {
         dot0.style.backgroundColor = "red";
         dot1.style.backgroundColor = "grey";
         dot2.style.backgroundColor = "grey";
+        dot3.style.backgroundColor = "grey";
       } else if (firstPost / 4 == 1) {
         dot0.style.backgroundColor = "grey";
         dot1.style.backgroundColor = "red";
         dot2.style.backgroundColor = "grey";
+        dot3.style.backgroundColor = "grey";
       } else if (firstPost / 4 == 2) {
         dot0.style.backgroundColor = "grey";
         dot1.style.backgroundColor = "grey";
         dot2.style.backgroundColor = "red";
+        dot3.style.backgroundColor = "grey";
+      } else if (firstPost / 4 == 3) {
+        dot0.style.backgroundColor = "grey";
+        dot1.style.backgroundColor = "grey";
+        dot2.style.backgroundColor = "grey";
+        dot3.style.backgroundColor = "red";
       }
     });
 
@@ -108,14 +125,22 @@ async function getLatestPosts() {
         dot0.style.backgroundColor = "red";
         dot1.style.backgroundColor = "grey";
         dot2.style.backgroundColor = "grey";
+        dot3.style.backgroundColor = "grey";
       } else if (firstPost / 4 == 1) {
         dot0.style.backgroundColor = "grey";
         dot1.style.backgroundColor = "red";
         dot2.style.backgroundColor = "grey";
+        dot3.style.backgroundColor = "grey";
       } else if (firstPost / 4 == 2) {
         dot0.style.backgroundColor = "grey";
         dot1.style.backgroundColor = "grey";
         dot2.style.backgroundColor = "red";
+        dot3.style.backgroundColor = "grey";
+      } else if (firstPost / 4 == 3) {
+        dot0.style.backgroundColor = "grey";
+        dot1.style.backgroundColor = "grey";
+        dot2.style.backgroundColor = "grey";
+        dot3.style.backgroundColor = "red";
       }
     });
   } catch (error) {
