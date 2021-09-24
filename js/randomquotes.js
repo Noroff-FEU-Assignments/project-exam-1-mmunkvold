@@ -1,5 +1,3 @@
-// Quote for today on the main page and maybe some other page
-
 const randomContainer = document.querySelector(".random-quote");
 console.log(randomContainer);
 

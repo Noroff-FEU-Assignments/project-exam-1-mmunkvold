@@ -15,7 +15,7 @@
   --orange: #ffa500;
   --red-color: #ff0000;
   --light-red: #f4b1b1;
-  --box-shadow: 2px 2px 2px var(--grey);
+  --box-shadow: 2px 2px 2px #666;
 }
 
 html,
@@ -123,7 +123,9 @@ nav {
   line-height: 0.125;
 }
 
-.title-container h1 {
+.title-container p:first-of-type {
+  font-size: large;
+  font-weight: 700;
   padding: 0;
   margin-left: 0.3em;
 }
@@ -163,25 +165,21 @@ main {
 /* NEWEST POST */
 
 .newest {
+  /* background: var(--lightest-green); */
   background: var(--lightest-green);
+  border: 2px solid var(--light-grey); /* applied elsewhere */
   padding: 0.5em;
 }
 
 .newest p:first-of-type,
-.singlepost p:first-of-type {
+.single-post p:first-of-type {
   font-size: larger;
   font-weight: bold;
 }
 
 .newest h1 {
-  margin-top: 1em;
-  padding-top: 0;
-}
-
-.newest a {
-  font-size: small;
-  padding-left: 1.5em;
-  text-align: right;
+  margin-top: 0;
+  /* padding-top: 0 0 0 1.5em; */
 }
 
 .newest-label {
@@ -195,7 +193,7 @@ main {
   font-weight: 700;
   text-align: center;
   position: absolute;
-  top: 11.7em;
+  top: 10em;
   left: 1em;
 }
 
@@ -207,11 +205,11 @@ main {
 /* CAROUSEL LATEST POSTS */
 
 .latest-wrapper {
-  background: var(--light-green);
+  /* background: var(--light-green); */
   margin-top: 4em;
 }
 
-.latest-wrapper h2,
+/* .latest-wrapper h2, */
 .featured-container h2 {
   color: var(--white-color);
 }
@@ -238,25 +236,30 @@ main {
   text-align: center;
   padding: 1em;
   background: var(--white-color);
+  border: 2px solid var(--light-grey); /* this may be applied elsewhere */
 }
 
 .carousel-actions {
   display: flex;
-  max-width: 50%;
+  max-width: 20%;
   justify-content: space-between;
   margin: 0.7em auto;
 }
 
 .next-btn,
 .prev-btn {
-  background-color: var(--light-grey);
+  /* background-color: var(--light-grey); */
+  background: none;
   color: var(--dark-font);
-  border: 1px solid var(--grey);
+  /*  border: 1px solid var(--grey);*/
   box-shadow: none;
+  border: none;
   font-size: 2rem;
   padding: 0;
   cursor: pointer;
   margin: 0 0 1em;
+  display: absolute;
+  top: 3em;
 }
 
 .next-btn:hover,
@@ -264,6 +267,14 @@ main {
 .next-btn:focus,
 .prev-btn:focus {
   background-color: var(--grey);
+}
+
+.dots {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: grey;
+  margin-top: 1em;
 }
 
 /* GET STARTED */
@@ -276,6 +287,11 @@ main {
 
 .get-started-item {
   margin: 0 1em;
+  border: 2px solid var(--light-grey); /* applied elsewhere */
+}
+
+.get-started h2 {
+  margin-top: 30em;
 }
 
 /* FEATURED POSTS */
@@ -296,6 +312,7 @@ main {
   max-width: 100%;
   margin: 0 auto 2em;
   background: var(--white-color);
+  border: 2px solid var(--light-grey); /* applied elsewhere */
 }
 
 .featured-item-noborder {
@@ -378,7 +395,8 @@ aside {
 }
 
 .about-box,
-.category-list {
+.category-list,
+.comments {
   border: 5px solid var(--light-grey);
 }
 
@@ -387,19 +405,14 @@ aside {
 .random-quote,
 .comments {
   background: var(--light-background);
-}
-
-.about-box,
-.category-list {
   margin: 0 auto 2em;
   max-width: 300px;
 }
 
-.random-quote,
-.comments {
+/*  {
   max-width: 80%;
   margin: 0 auto;
-}
+} */
 
 .about-box img {
   width: 50%;
@@ -409,8 +422,7 @@ aside {
   padding: 3em;
 }
 
-.random-quote,
-.comments {
+.random-quote {
   border: 1px dotted var(--light-grey);
 }
 
@@ -491,6 +503,7 @@ footer .active {
 .about-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 12em;
 }
 
 /* ================
@@ -498,7 +511,7 @@ footer .active {
   =================== */
 
 .results-container {
-  margin: 0 auto;
+  margin: 0 auto 8em;
 }
 
 .results {
@@ -532,11 +545,11 @@ footer .active {
     SINGLE POST PAGE 
   =================== */
 
-.singlepost {
+.single-post {
   margin: 0 auto;
 }
 
-.singlepost img {
+.single-post img {
   height: auto;
 }
 
@@ -581,8 +594,8 @@ footer .active {
 /* COMMENT SECTION */
 
 .comment-container {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  /* flex-direction: column; */
 }
 
 /* =====================
@@ -598,8 +611,8 @@ footer .active {
   padding-top: 0;
 }
 
-.singlecategory {
-  margin-bottom: 1em;
+.single-category {
+  margin-bottom: 12em;
 }
 
 /* ================
@@ -650,8 +663,30 @@ figcaption {
   font-style: italic;
 }
 
-abbr {
-  text-decoration: none;
+.loading-indicator {
+  margin: 0 auto;
+  /* position: relative; */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px dashed var(--light-green);
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-msg {
+  border: 2px solid var(--red-color);
+  background-color: var(--light-red);
+  padding: 1em;
 }
 
 /* IMAGE MODAL */
@@ -661,8 +696,8 @@ abbr {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
-  max-width: 100%;
+  width: 800px;
+  max-width: 80%;
 }
 
 #modal p,
@@ -670,11 +705,15 @@ abbr {
   display: none;
 }
 
+.wp-block-image {
+  cursor: pointer;
+}
 #modal img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   margin: auto;
+  cursor: default;
   animation: smooth 0.9s ease-in;
 }
 
@@ -731,7 +770,7 @@ abbr {
   }
 
   .newest img {
-    max-width: 70%;
+    max-width: 100%;
   }
 
   .latest-carousel {
@@ -766,10 +805,6 @@ abbr {
     margin: 1em 2em 4em;
   }
 
-  .random-quote {
-    max-width: 100%;
-  }
-
   footer {
     position: static;
   }
@@ -795,11 +830,11 @@ abbr {
     border-right: 0;
   }
 
-  .singlepost {
+  .single-post {
     width: 70ch;
   }
 
-  .singlepost img {
+  .single-post img {
     max-width: 300px;
   }
 
@@ -895,9 +930,9 @@ abbr {
     grid-template-columns: repeat(2, 250px);
   }
 
-  .newest {
-    columns: 30ch;
-  }
+  /* .newest {
+    columns: 300ch;
+  } */
 
   .container {
     width: 65ch;
@@ -1029,4 +1064,9 @@ abbr {
 
 @media (min-width: 1500px) {
   /* WHAT ABOUT BIG BIG SCREENS? */
+}
+@media (min-width: 1650px) {
+  .newest {
+    /* denne trenger maxstr for store skjermer!!! */
+  }
 }

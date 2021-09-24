@@ -1,27 +1,22 @@
-#contact-form,
-#comment-form {
+.contact-form,
+.comment-form {
   background: var(--light-background);
   border: none;
   width: 360px;
   padding: 1em 0;
   color: var(--dark-color);
-  /*  margin-top: 1em; */
   box-shadow: var(--box-shadow);
   border-radius: 0.2rem;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 0 auto 10em;
 }
 
-/* This inherit from the parent's values */
 input,
 textarea {
   font-family: inherit;
   font-size: 80%;
   width: 280px;
   margin: 0.5em 0;
-  /*  padding: 0;
-  margin: 0; */
-  /* box-sizing: border-box; */
 }
 
 input:focus,
@@ -31,21 +26,11 @@ textarea:focus {
 
 textarea {
   overflow: auto;
-  /* background-image: url("../summertree.png");
-  background-repeat: no-repeat;
-  background-size: 15%;
-  opacity: 30%;
-  background-position: bottom right; */
 }
 
 button {
   background: var(--main-green);
   color: var(--white-color);
-  /*  margin-top: 10px;*/
-  /* border-radius: 10%; */
-  /*  width: 80px; */
-  padding: 0.4em;
-  /* margin-left: 0.3em; */
   margin: 0 auto;
   border: 2px solid var(--grey);
   box-shadow: var(--box-shadow);
@@ -54,10 +39,7 @@ button {
   font-size: 0.8rem;
   cursor: pointer;
   padding: 0.5em;
-  /* position: absolute; */
-  /* top: 6em; */
   text-align: center;
-  /* left: 2em; */
 }
 
 .seemore-btn {
@@ -67,22 +49,18 @@ button {
 button:hover,
 button:focus {
   background: var(--grey);
-  /* color: var(--white-color); */
 }
 
-#search-form {
+.search-form {
   width: 100%;
   margin: 0;
   background: var(--white-color);
   box-shadow: none;
-  /*  margin-bottom: 2em; */
   border-radius: 0.2rem;
   cursor: pointer;
-  /* padding: 1em; */
   position: absolute;
   top: 6em;
   text-align: center;
-  /* left: 2em; */
 }
 
 #search {
@@ -91,11 +69,14 @@ button:focus {
 }
 
 #search-btn {
-  /*   background-color: hotpink; */
   max-width: 50px;
 }
 
-/* Styling the error handling on the form */
+::placeholder {
+  color: var(--dark-color);
+}
+
+/* Styling the error handling on the form and errors elsewhere*/
 .success {
   display: none;
   width: 50%;
@@ -115,25 +96,23 @@ button:focus {
   padding: 0.2em;
 }
 
-input:invalid {
+/* input:invalid {
   border-color: var(--red-color);
   background-color: var(--light-red);
 }
 input:focus:invalid {
   outline: none;
-}
+} */
 
 /* ================
     Media Queries 
   =================== */
 
 @media (min-width: 600px) {
-  #search-form {
+  .search-form {
     position: absolute;
     top: 4.5em;
     right: 0;
-    /*  text-align: right; */
-    /* padding-right: 1em; */
     width: 50%;
   }
 
@@ -143,18 +122,18 @@ input:focus:invalid {
 }
 
 @media (min-width: 1000px) {
-  #contact-form {
+  .contact-form {
     display: flex;
     flex-direction: row;
     width: 700px;
   }
-  #search-form {
+  .search-form {
     width: 35%;
   }
 }
 
 @media (min-width: 1300px) {
-  #search-form {
+  .search-form {
     width: 25%;
   }
 }

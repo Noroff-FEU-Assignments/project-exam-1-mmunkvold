@@ -1,3 +1,3 @@
-function displayError(message = "Error Unknown") {
-  return `<div class="error-message">${message}</div>`;
+function displayError(message = "Unknown Error") {
+  return `<div class="error-msg">${message}</div>`;
 }

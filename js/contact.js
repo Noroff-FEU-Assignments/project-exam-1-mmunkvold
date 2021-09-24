@@ -3,7 +3,7 @@
 //-	Subject (Should be more than 15 characters long)
 //-	Message content (Should be more than 25 characters long)
 
-const form = document.querySelector("#contact-form");
+const form = document.querySelector(".contact-form");
 console.log(form);
 
 const fullName = document.getElementById("fullname");
@@ -17,17 +17,6 @@ const subjectError = document.querySelector("#subject + div.error");
 
 const message = document.getElementById("message");
 const messageError = document.querySelector("#message + div.error");
-
-/* const file = document.getElementById("file");
-const fileError = document.querySelector("#file + div.error"); */
-
-//get this to work, or just remove the file upload from the form
-/* const fileUpload = document.getElementById("file");
-fileUpload.required = false; */
-
-//get this to work, or just remove the file upload from the form
-/* const fileUpload = document.getElementById("file");
-fileUpload.required = false; */
 
 const showSuccessMessage = document.querySelector(".success");
 
@@ -57,19 +46,8 @@ function validateForm(event) {
   } else {
     messageError.style.display = "block";
   }
-  /* if (validateFile(file.value) === true) {
-    fileError.style.display = "none";
-  } else {
-    fileError.style.display = "block";
-  } */
 
-  if (
-    checkLength(fullName.value, 6) &&
-    validateEmail(email.value) &&
-    checkLength(subject.value, 16) &&
-    checkLength(message.value, 26) /* &&
-    validateFile(file.value) */ === true
-  ) {
+  if (checkLength(fullName.value, 6) && validateEmail(email.value) && checkLength(subject.value, 16) && checkLength(message.value, 26) === true) {
     showSuccessMessage.style.display = "block";
     form.style.display = "none";
   } else {
@@ -92,9 +70,3 @@ function validateEmail(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
-
-/* function validateFile(file) {
-  const regEx = /(\.jpg|\.jpeg|\.png)$/i;
-  const patternMatches = regEx.test(file);
-  return patternMatches;
-} */
