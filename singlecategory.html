@@ -43,8 +43,8 @@
         </a>
         <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
         <p class="subtitle-right">and be happy!</p>
-        <form class="search-form" action="#" method="GET">
-          <label for="search"></label>
+        <form class="search-form" action="search.html" method="GET">
+          <label for="search" aria-label="Search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
         </form>
@@ -61,8 +61,9 @@
     <main>
       <div class="category-name"></div>
       <div class="single-category">
-        <div class="loading-indicator"></div>
-        <div>Loading...</div>
+        <div class="loading">
+          <div class="loading-indicator">Loading...</div>
+        </div>
       </div>
     </main>
     <footer>

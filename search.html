@@ -27,8 +27,8 @@
         </a>
         <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
         <p class="subtitle-right">and be happy!</p>
-        <form class="search-form" action="#" method="GET">
-          <label for="search"></label>
+        <form class="search-form" action="search.html" method="GET">
+          <label for="search" aria-label="Search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
         </form>
@@ -42,7 +42,13 @@
       </nav>
     </header>
     <main>
-      <div class="search-result">Something</div>
+      <h1>Search Result</h1>
+      <div class="search-result-container">
+        <div class="search-result">
+          <div class="loading-indicator"></div>
+          <div class="loading">Loading...</div>
+        </div>
+      </div>
     </main>
     <footer>
       <ul id="footer-menu">
