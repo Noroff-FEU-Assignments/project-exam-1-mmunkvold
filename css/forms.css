@@ -21,7 +21,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.1); /* NB! Bytt denne fargen! */
+  background: rgba(31, 30, 30, 0.1); /* NB! Bytt denne fargen! */
 }
 
 textarea {
@@ -43,7 +43,7 @@ button {
 }
 
 .seemore-btn {
-  margin: 2em 33% 4em;
+  margin: 2em 38% 10em;
 }
 
 button:hover,
@@ -76,7 +76,6 @@ button:focus {
   color: var(--dark-color);
 }
 
-/* Styling the error handling on the form and errors elsewhere*/
 .success {
   display: none;
   width: 50%;
@@ -96,14 +95,6 @@ button:focus {
   padding: 0.2em;
 }
 
-/* input:invalid {
-  border-color: var(--red-color);
-  background-color: var(--light-red);
-}
-input:focus:invalid {
-  outline: none;
-} */
-
 /* ================
     Media Queries 
   =================== */
@@ -117,7 +108,8 @@ input:focus:invalid {
   }
 
   .seemore-btn {
-    margin: 2em 45% 1em;
+    margin: 2em 40% 1em;
+    width: 120px;
   }
 }
 
@@ -135,5 +127,9 @@ input:focus:invalid {
 @media (min-width: 1300px) {
   .search-form {
     width: 25%;
+  }
+
+  .seemore-btn {
+    margin: 2em 45% 1em;
   }
 }
