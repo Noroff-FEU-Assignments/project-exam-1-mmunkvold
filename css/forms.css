@@ -142,3 +142,9 @@ button:focus {
     margin: 2em 45% 1em;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .search-form {
+    background-color: var(--dark-color);
+  }
+}

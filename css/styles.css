@@ -40,6 +40,17 @@ img {
 /* ================
       Typography 
   =================== */
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
 
 h1,
 h2,
@@ -132,7 +143,7 @@ nav {
 .subtitle-right,
 .subtitle-left {
   color: var(--dark-green);
-  line-height: 2.7;
+  line-height: 2.5;
 }
 
 .subtitle-right {
@@ -204,7 +215,7 @@ main {
   font-weight: 700;
   text-align: center;
   position: absolute;
-  top: 10em;
+  top: 11em;
   left: 1em;
 }
 
@@ -510,6 +521,7 @@ footer .active {
   display: flex;
   flex-direction: column;
   margin-bottom: 12em;
+  padding: 0 1em;
 }
 
 .about-container img {
@@ -759,7 +771,8 @@ figcaption,
 
   .subtitle-left {
     display: block;
-    line-height: 0.7;
+    line-height: 1;
+    margin-left: 1em;
   }
 
   .subtitle-right {
@@ -841,7 +854,7 @@ figcaption,
   }
 
   .single-category {
-    padding: 0 33%;
+    margin: 0 30%;
   }
 
   .singlepost {
@@ -936,7 +949,7 @@ figcaption,
   }
 
   .single-category {
-    padding: 0;
+    margin: 0;
   }
 }
 
@@ -977,6 +990,7 @@ figcaption,
 
   .subtitle-left {
     line-height: 4;
+    margin-left: -1.5em;
   }
 
   .main-menu {
