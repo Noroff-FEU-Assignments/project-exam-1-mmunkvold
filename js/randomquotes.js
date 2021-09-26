@@ -1,5 +1,4 @@
 const randomContainer = document.querySelector(".random-quote");
-console.log(randomContainer);
 
 const quotes = [
   "He who leans against a big tree will always find shade. ~ Albanian Proverb",

@@ -12,7 +12,6 @@ async function getSingleCategory() {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results);
 
     singleCategoryContainer.innerHTML = "";
 
@@ -23,7 +22,7 @@ async function getSingleCategory() {
       singleCategoryContainer.innerHTML += `<div class="results"><div class="result-item result-item-noborder"><a href="singlepost.html?id=${results[i].id}"><div><img class="noborder" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"></div><div class="result-item"><div><h3>${results[i].title.rendered}</h3></a>${results[i].excerpt.rendered}</div></div></div>`;
     }
   } catch (error) {
-    //console.log("something very strange here...");
+    singlePostContainer.innerHTML = displayError("Oh dear, something isn't working...");
   }
 }
 getSingleCategory();

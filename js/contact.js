@@ -1,10 +1,4 @@
-//-	Name (Should be more than 5 characters long)
-//-	Email address (Must be a valid email address)
-//-	Subject (Should be more than 15 characters long)
-//-	Message content (Should be more than 25 characters long)
-
 const form = document.querySelector(".contact-form");
-console.log(form);
 
 const fullName = document.getElementById("fullname");
 const fullNameError = document.querySelector("#fullname + div.error");
@@ -51,7 +45,7 @@ function validateForm(event) {
     showSuccessMessage.style.display = "block";
     form.style.display = "none";
   } else {
-    console.log("something is not working...");
+    //console.log("Something is not working...");
   }
 }
 

@@ -13,18 +13,17 @@ async function getNewestPost() {
       createHTML(result);
     });
   } catch (error) {
-    //console.log("something strange here...");
+    newestPostContainer.innerHTML = displayError("Oh dear, something isn't working...");
   }
 }
 getNewestPost();
 
 function createHTML(result) {
-  console.log("this html works");
   newestPostContainer.innerHTML = `<div class="newest"><div class="newest-label">Newest Post</div><div><a href="singlepost.html?id=${result.id}"><h1>${result.title.rendered}</h1></a></div><div>${result.content.rendered}</div></div></div>`;
 }
 
 //===========================================//
-//THIS CODE NEEDS WORK!!
+
 //Mid section with "4 latest posts" with slider/carousel:
 
 const url = "https://monicamunkvoldnikolaisen.no/treehugging/wp-json/wp/v2/posts?per_page=100&_embed";
@@ -41,14 +40,12 @@ async function getLatestPosts() {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results);
+
     latestPostContainer.innerHTML = "";
     let firstPost = 0;
 
     for (let i = firstPost; i < firstPost + 4; i++) {
       latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"><h3>${results[i].title.rendered}</h3></a></div></div>`;
-      /* previousBtn.style.display = "block";
-      nextBtn.style.display = "block"; */
     }
     if (firstPost / 4 == 0) {
       dot0.style.backgroundColor = "red";
@@ -82,8 +79,6 @@ async function getLatestPosts() {
 
       for (let i = firstPost; i < firstPost + 4; i++) {
         latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"><h3>${results[i].title.rendered}</h3></a></div></div>`;
-        /* previousBtn.style.display = "block";
-        nextBtn.style.display = "block"; */
       }
       if (firstPost / 4 == 0) {
         dot0.style.backgroundColor = "red";
@@ -118,8 +113,6 @@ async function getLatestPosts() {
       }
       for (let i = firstPost; i < firstPost + 4; i++) {
         latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"><h3>${results[i].title.rendered}</h3></a></div></div>`;
-        /*  previousBtn.style.display = "block";
-        nextBtn.style.display = "block"; */
       }
       if (firstPost / 4 == 0) {
         dot0.style.backgroundColor = "red";
@@ -144,7 +137,6 @@ async function getLatestPosts() {
       }
     });
   } catch (error) {
-    //console.log(error);
     latestPostContainer.innerHTML = displayError("Oh dear, something isn't working...");
   }
 }
@@ -167,11 +159,11 @@ async function getFeaturedPosts() {
       if (i === 2) {
         break;
       }
-      //console.log("this html section works at least");
+
       featuredPostContainer.innerHTML += `<div class="featured"><div class="featured-item "><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3></a><p>${results[i].excerpt.rendered}</p><div class="featured-item featured-item-noborder"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"/></div></div></div>`;
     }
   } catch (error) {
-    //console.log("something very strange here...");
+    featuredPostContainer.innerHTML = displayError("Oh dear, something isn't working...");
   }
 }
 getFeaturedPosts();
@@ -191,38 +183,10 @@ async function getCategories() {
 
     categoryContainer.innerHTML = "";
     for (let i = 0; i < results.length; i++) {
-      //console.log("this html section works at least");
       categoryContainer.innerHTML += `<div class="category"><a href="singlecategory.html?id=${results[i].id}"><h3>${results[i].name}</h3></a><p>${results[i].description}</p></div>`;
     }
   } catch (error) {
-    //console.log("something very strange here...");
+    categoryContainer.innerHTML = displayError("Oh dear, something isn't working...");
   }
 }
 getCategories();
-
-//===========================================//
-
-// Aside section with "recent comments":
-
-const recentCommentsContainer = document.querySelector(".recent-comments");
-
-const urlComments = "https://monicamunkvoldnikolaisen.no/treehugging/wp-json/wp/v2/comments?_embed";
-
-async function getRecentComments() {
-  try {
-    const response = await fetch(urlComments);
-    const results = await response.json();
-
-    recentCommentsContainer.innerHTML = "";
-    for (let i = 0; i < results.length; i++) {
-      if (i === 4) {
-        break;
-      }
-      //console.log("wow html");
-      recentCommentsContainer.innerHTML += `<div class="recent-comments"><h3>${results[i].author_name}</h3><p>${results[i].content.rendered}</p></div>`;
-    }
-  } catch (error) {
-    //console.log("something very strange here...");
-  }
-}
-getRecentComments();
