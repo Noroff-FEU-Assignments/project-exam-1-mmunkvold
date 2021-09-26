@@ -122,6 +122,8 @@ button:focus {
   }
 }
 
+/*  ============================== */
+
 @media (min-width: 1000px) {
   .contact-form {
     display: flex;
@@ -133,6 +135,8 @@ button:focus {
   }
 }
 
+/*  ============================== */
+
 @media (min-width: 1300px) {
   .search-form {
     width: 25%;
@@ -142,6 +146,8 @@ button:focus {
     margin: 2em 45% 1em;
   }
 }
+
+/*  ============================== */
 
 @media (prefers-color-scheme: dark) {
   .search-form {

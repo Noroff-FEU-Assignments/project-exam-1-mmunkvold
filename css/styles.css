@@ -580,6 +580,7 @@ footer .active {
 /* =====================
     SINGLE CATEGORY PAGE 
   ======================== */
+
 .category-name h2 {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -931,8 +932,8 @@ figcaption,
     display: block;
     position: absolute;
     z-index: -1;
-    right: 2em;
-    top: 30em;
+    right: 1em;
+    top: 40em;
   }
 
   .results-container {
@@ -1024,8 +1025,8 @@ figcaption,
   }
 
   .tree-drawing-contactpage {
-    left: 47em;
-    top: 22em;
+    right: 1em;
+    top: 30em;
   }
 
   .search-result-container {
@@ -1070,13 +1071,8 @@ figcaption,
 
 @media (min-width: 1300px) {
   .tree-drawing-contactpage {
-    left: 58em;
+    right: 5em;
   }
-
-  /* aside {
-    margin-left: auto;
-    margin-right: auto;
-  } */
 
   .about-box,
   .category-list,
@@ -1093,6 +1089,8 @@ figcaption,
     columns: 60ch;
   }
 }
+
+/* ================================== */
 
 @media (prefers-color-scheme: dark) {
   body,
