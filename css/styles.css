@@ -521,7 +521,8 @@ footer .active {
   =================== */
 
 .results-container {
-  margin: 0 auto 6em;
+  margin: 0 auto 15em;
+  border: 2px solid lightblue;
 }
 
 .results {
