@@ -145,10 +145,10 @@ nav {
 }
 
 .logo {
-  max-width: 30%;
+  max-width: 60px;
   position: absolute;
   left: 9em;
-  margin-top:.3em;
+  margin-top: 0.3em;
 }
 
 #logo_light {
@@ -750,7 +750,7 @@ figcaption,
   }
 
   .logo {
-    max-width: 20%;
+    max-width: 70px;
     left: 11em;
   }
 
