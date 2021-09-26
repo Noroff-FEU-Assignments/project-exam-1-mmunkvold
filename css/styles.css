@@ -148,7 +148,7 @@ nav {
   max-width: 60px;
   position: absolute;
   left: 9em;
-  margin-top: 0.3em;
+  margin-top: 1em;
 }
 
 #logo_light {
@@ -1084,7 +1084,8 @@ figcaption,
 
 @media (prefers-color-scheme: dark) {
   body,
-  .random-quote {
+  .random-quote,
+  .search-result-item {
     background-color: var(--dark-color);
   }
 
@@ -1104,6 +1105,7 @@ figcaption,
 
   .copyright,
   #totop,
+  .featured h3,
   .featured p,
   .random-quote,
   .category-list,
