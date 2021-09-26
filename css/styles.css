@@ -126,7 +126,6 @@ nav {
 .title-container p:first-of-type {
   font-size: large;
   font-weight: 700;
-  padding: 0;
   margin-left: 0.3em;
 }
 
@@ -145,10 +144,8 @@ nav {
 }
 
 .logo {
-  max-width: 60px;
-  position: absolute;
-  left: 9em;
-  margin-top: 1em;
+  max-width: 50px;
+  margin: 0.6em auto;
 }
 
 #logo_light {
@@ -524,7 +521,7 @@ footer .active {
   =================== */
 
 .results-container {
-  margin: 0 auto 2em;
+  margin: 0 auto 4em;
 }
 
 .results {
@@ -751,6 +748,7 @@ figcaption,
 
   .logo {
     max-width: 70px;
+    position: absolute;
     left: 11em;
   }
 
@@ -986,7 +984,7 @@ figcaption,
   }
 
   .logo {
-    left: 18em;
+    left: 20em;
   }
 
   .container {
