@@ -1043,7 +1043,8 @@ figcaption,
   aside {
     flex-direction: column;
     flex: 1;
-    margin: 0 1em;
+    margin: 0 2em;
+    max-width: 100%;
   }
 
   .random-quote,
@@ -1058,6 +1059,18 @@ figcaption,
   .tree-drawing-contactpage {
     left: 58em;
   }
+
+  /* aside {
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .about-box,
+  .category-list,
+  .random-quote,
+  .tree-drawing {
+    margin-left: 3em;
+  }
 }
 
 /* ================================== */
@@ -1069,9 +1082,11 @@ figcaption,
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  body,
+  .random-quote {
     background-color: var(--dark-color);
   }
+
   body,
   a,
   a:hover,
@@ -1081,9 +1096,11 @@ figcaption,
   .subtitle-left,
   .subtitle-right,
   .nav-link,
-  .results-container h3 {
+  .results-container h3,
+  .random-quote {
     color: var(--white-color);
   }
+
   .copyright,
   #totop,
   .featured p,
@@ -1096,6 +1113,12 @@ figcaption,
   .newest,
   .newest h1 {
     color: var(--dark-color);
+  }
+
+  .random-quote {
+    background: none;
+    color: var(--white-color);
+    border: none;
   }
 
   #logo_light {
